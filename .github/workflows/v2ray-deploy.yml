@@ -13,6 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up V2Ray
+      - name: Install dependencies
         run: |
-          sudo bash <(curl -Ls https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/master/install.sh)
+          sudo apt-get update
+          sudo apt-get install -y curl
+
+      - name: Download and run installation script
+        run: |
+          curl -Ls https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/master/install.sh -o install.sh
+          sudo bash install.sh
