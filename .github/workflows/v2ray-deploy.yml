@@ -15,5 +15,4 @@ jobs:
 
       - name: Set up V2Ray
         run: |
-          sudo apt-get update
           sudo bash <(curl -Ls https://raw.githubusercontent.com/NidukaAkalanka/x-ui-english/master/install.sh)
